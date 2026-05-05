@@ -9,13 +9,13 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file <stats.ce> 
+ * @brief <assesment 1>
  *
- * <Add Extended Description Here>
+ * <Introduction to Embedded Systems - Module 1 - assesment 1>
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author <Federico March>
+ * @date <05/05/2026>
  *
  */
 
@@ -25,7 +25,7 @@
 #include "stats.h"
 
 /* Size of the Data Set */
-#define SIZE (40)
+#define SIZE (40) // definisce una costante simbolica
 
 void main() {
 
@@ -35,9 +35,35 @@ void main() {
                               201,   6,  12,  60,   8,   2,   5,  67,
                                 7,  87, 250, 230,  99,   3, 100,  90};
 
+
+
   /* Other Variable Declarations Go Here */
   /* Statistics and Printing Functions Go Here */
+  
+  print_array(test, SIZE);
 
 }
 
 /* Add other Implementation File Code Here */
+
+void print_array(unsigned char *array, unsigned int size){
+
+	printf("Array:\n");
+	
+	for (int i = 0; i < size; i ++) {
+
+		printf("%d", array[i]);
+
+		if (i != size - 1) {
+
+			printf(", ");
+		}
+		else {
+
+			printf("\n");
+
+		}
+
+	}
+
+}
