@@ -73,7 +73,7 @@ void print_array(unsigned char *array, unsigned int size){
 
 unsigned char find_mean(unsigned char *array, unsigned int size)
 {
-  unsigned char sum = 0;
+  unsigned int sum = 0;
 
   for (int i = 0; i < size; i++) {
 
@@ -82,6 +82,6 @@ unsigned char find_mean(unsigned char *array, unsigned int size)
   }
 
   // compute and return the mean value 
-  return (sum / size) ;
+  return (unsigned char) (sum / size) ;
 
 }
