@@ -67,22 +67,21 @@ void print_array(unsigned char *array, unsigned int size){
 			printf("\n");
 
 		}
+  }
 
 }
 
 unsigned char find_mean(unsigned char *array, unsigned int size)
 {
-  unsigned char mean = 0;
+  unsigned char sum = 0;
 
   for (int i = 0; i < size; i++) {
 
     // sum every element of the array
-    mean = mean + array[i];
+    sum = sum + array[i];
   }
 
   // compute and return the mean value 
-  return mean / size;
-
-}
+  return (sum / size) ;
 
 }
