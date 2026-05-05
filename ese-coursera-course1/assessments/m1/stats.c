@@ -38,14 +38,18 @@ void main() {
 
 
   /* Other Variable Declarations Go Here */
+  unsigned char mean = find_mean(test, SIZE);
+
+
   /* Statistics and Printing Functions Go Here */
-  
   print_array(test, SIZE);
+  printf("Mean Value: %d\n", mean);
 
 }
 
 /* Add other Implementation File Code Here */
 
+// in una funzione in c un array viene visto come un puntatore al primo elemento dell'array
 void print_array(unsigned char *array, unsigned int size){
 
 	printf("Array:\n");
@@ -64,6 +68,21 @@ void print_array(unsigned char *array, unsigned int size){
 
 		}
 
-	}
+}
+
+unsigned char find_mean(unsigned char *array, unsigned int size)
+{
+  unsigned char mean = 0;
+
+  for (int i = 0; i < size; i++) {
+
+    // sum every element of the array
+    mean = mean + array[i];
+  }
+
+  // compute and return the mean value 
+  return mean / size;
+
+}
 
 }
